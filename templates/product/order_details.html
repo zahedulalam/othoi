@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center py-5">
+        <h1 class="display-4 text-white animated slideInDown mb-3">Order Details</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a class="text-white" href="{% url 'home' %}">Home</a></li>
+                <li class="breadcrumb-item text-primary active" aria-current="page">Order Details</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Checkout Section Begin -->
+<section class="checkout spad">
+  <div class="container">
+      <form action="#" class="checkout__form">
+          <div class="row">
+              <div class="col-lg-8">
+                  <h5>Billing detail</h5>
+                  <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                          <div class="checkout__form__input">
+                              <p>First Name <span>*</span></p>
+                              <input type="text">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                          <div class="checkout__form__input">
+                              <p>Last Name <span>*</span></p>
+                              <input type="text">
+                          </div>
+                      </div>
+                      <div class="col-lg-12">
+                          <div class="checkout__form__input">
+                              <p>Country <span>*</span></p>
+                              <input type="text">
+                          </div>
+                          <div class="checkout__form__input">
+                              <p>Address <span>*</span></p>
+                              <input type="text" placeholder="Street Address">
+                              <input type="text" placeholder="Apartment. suite, unite ect ( optinal )">
+                          </div>
+                          <div class="checkout__form__input">
+                            <p>Landmark (Optional)</p>
+                            <input type="text" placeholder="E.g. beside train station">
+                        </div>
+
+                          <div class="checkout__form__input">
+                              <p>Town/City <span>*</span></p>
+                              <input type="text">
+                          </div>
+                          <div class="checkout__form__input">
+                              <p>State <span>*</span></p>
+                              <input type="text">
+                          </div>
+                          <div class="checkout__form__input">
+                            <p>Area <span>*</span></p>
+                            <input type="text">
+                        </div>
+                          <div class="checkout__form__input">
+                              <p>Postcode/Zip <span>*</span></p>
+                              <input type="text">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                          <div class="checkout__form__input">
+                              <p>Phone <span>*</span></p>
+                              <input type="text">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                          <div class="checkout__form__input">
+                              <p>Email <span>*</span></p>
+                              <input type="text">
+                          </div>
+                      </div>
+                      <div class="col-lg-12">
+                          <div class="checkout__form__checkbox">
+                          <p>Select a label for effective delivery: </p>
+                          </div>
+                          <div class="checkout__order__widget">
+                            <label for="home">
+                                Home
+                                <input type="checkbox" id="home" class="checkmark" name="counting" value="1">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="office">
+                                Office
+                                <input type="checkbox" id="office" class="checkmark" name="counting" value="2">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                              <div class="checkout__form__input">
+                                  <p>Order notes <span>*</span></p>
+                                  <input type="text"
+                                  placeholder="Note about your order, e.g, special noe for delivery">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4">
+                      <div class="checkout__order">
+                          <h5>Your order</h5>
+                          <div class="checkout__order__product">
+                              <ul>
+                                  <li>
+                                      <span class="top__text">Product</span>
+                                      <span class="top__text__right">Total</span>
+                                  </li>
+                                  <li>Camp for what <span>৳ 500</span></li>
+                              </ul>
+                          </div>
+                          <div class="checkout__order__total">
+                              <ul>
+                                  <li>Subtotal <span>৳ 500</span></li>
+                                  <li>Delivery Fee <span>৳ 100</span></li>
+                                  <li>Total <span>৳ 600</span></li>
+                              </ul>
+                          </div>
+                          <div class="checkout__order__widget">
+                              <label for="Cash on Delivery">
+                                  Cash on Delivery
+                                  <input type="checkbox" id="Cash on Delivery" name="payment" value="1">
+                                  <span class="checkmark"></span>
+                              </label>
+                              <label for="Pay Now">
+                                  Pay Now
+                                  <input type="checkbox" id="Pay Now" name="payment" value="2">
+                                  <span class="checkmark"></span>
+                              </label>
+                          </div>
+                          <a href="#" type="submit" class="btn btn-primary w-100">Place Order</a>
+                      </div>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </section>
+  
+  
+  <!-- Checkout Section End -->
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  $(document).ready(function(){
+      $('input[name="counting"]').click(function(){ 
+          $('input[name="counting"]').not(this).prop('checked', false);
+      });
+  });
+
+
+  $(document).ready(function(){
+      $('input[name="payment"]').click(function(){ 
+          $('input[name="payment"]').not(this).prop('checked', false);
+      });
+  });
+</script>
+{% endblock extra_js %}
+
+
+

@@ -121,7 +121,7 @@
                                 <small>CEO & Founder</small>
                             </div>
                         </div>
-                        <a class="btn btn-primary rounded-pill py-3 px-5" href="">Read More</a>
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="{% url 'services' %}">Read More</a>
                     </div>
                 </div>
             </div>
@@ -248,7 +248,7 @@
                 <div class="project-item border rounded h-100 p-4" data-dot="01">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded" src="{% static 'img/project-1.jpg' %}" alt="">
-                        <a href="#"><i class="fa fa-eye fa-2x"></i></a>
+                        <a href="{% url 'product_details' %}"><i class="fa fa-eye fa-2x"></i></a>
                     </div>
                     <h6>Camp For What</h6>
                     <span>৳ 500</span>
@@ -256,7 +256,7 @@
                 <div class="project-item border rounded h-100 p-4" data-dot="02">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded" src="{% static 'img/project-2.jpg' %}" alt="">
-                        <a href="#"  ><i class="fa fa-eye fa-2x"></i></a>
+                        <a href=""{% url 'product_details' %}"  ><i class="fa fa-eye fa-2x"></i></a>
                     </div>
                     <h6>Camp For What</h6>
                     <span>৳ 500</span>
@@ -274,7 +274,6 @@
                 <h6 class="section-title bg-white text-center text-primary px-3">Our Team</h6>
                 <h1 class="display-6 mb-4">We Are A Team</h1>
             </div>
-        
             <div class="row g-4">
             {% for team in teams %}
                 <div class="col-lg-4 col-md-6 wow fadeInUp">

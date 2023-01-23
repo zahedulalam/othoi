@@ -13,6 +13,7 @@
   border: 0; // for button elements
   @include border-radius();
   opacity: $btn-close-opacity;
+  
 
   // Override <a>'s hover style
   &:hover {

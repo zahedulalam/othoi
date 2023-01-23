@@ -141,6 +141,10 @@ $('.product-links-wap a').click(function(){
     $(this).addClass('btn-secondary');
     return false;
   });
-  // End roduct detail
+  // End product detail
 
 
+// messages
+setTimeout(function(){
+    $('#message').fadeOut('slow');
+}, 4000)
